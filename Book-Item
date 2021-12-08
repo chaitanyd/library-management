@@ -18,7 +18,7 @@ class BookItem(Book):
     self.__borrowed = borrowed
     self.__due_date = due_date
     self.__price = price
-    self.__format = book_format
+    self.__book_format = book_format
     self.__status = status
     self.__date_of_purchase = date_of_purchase
     self.__publication_date = publication_date
