@@ -6,7 +6,7 @@ class BookReservation:
     self.__member_id = member_id
 
   def fetch_reservation_details(self, barcode):
-    None
+    self.barcode = barcode
 
 
 class BookLending:
