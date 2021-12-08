@@ -1,8 +1,8 @@
 class BookReservation:
-  def __init__(self, creation_date, status, book_item_barcode, member_id):
+  def __init__(self, creation_date, status, book_barcode, member_id):
     self.__creation_date = creation_date
     self.__status = status
-    self.__book_item_barcode = book_item_barcode
+    self.__book_barcode = book_item_barcode
     self.__member_id = member_id
 
   def fetch_reservation_details(self, barcode):
@@ -10,18 +10,19 @@ class BookReservation:
 
 
 class BookLending:
-  def __init__(self, creation_date, due_date, book_item_barcode, member_id):
+  def __init__(self, creation_date, due_date, book_barcode, member_id):
     self.__creation_date = creation_date
     self.__due_date = due_date
     self.__return_date = None
-    self.__book_item_barcode = book_item_barcode
+    self.__book_barcode = book_barcode
     self.__member_id = member_id
 
   def lend_book(self, barcode, member_id):
-    None
+    self.barcode = barcode
+    self.member_id = member_id
 
   def fetch_lending_details(self, barcode):
-    None
+    self.barcode = barcode
 
 
 class Fine:
@@ -31,4 +32,5 @@ class Fine:
     self.__member_id = member_id
 
   def collect_fine(self, member_id, days):
-    None
+    self.member_id = member_id
+    self.days = days
