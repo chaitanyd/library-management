@@ -8,12 +8,12 @@ Project File Structure
     pip install django
     
 2. Create a project and an app
-    django -admin startproject TechVidvanLibrary
+    django -admin startproject Library
     python manage.py startapp home
  
 3. Models.py
     Models.py file does the database connectivity.
-        - UserExtend() model extends the user model as the user model contains only email, first name, last name and password. As we also want to save the phone number of a person           in the database, we create this model.
+        - UserExtend() model extends the user model as the user model contains only email, first name, last name and password. As we also want to save the phone number of a               person in the database, we create this model.
         - The AddBook() model stores the data of books that are added in the library.
         - IssueBook() model stores the information of the book that is issued and also the studentid of the student to whom the book is issued.
     
